@@ -1,6 +1,6 @@
 
 (function(){
-    var a=['addEventListener','DOMContentLoaded','getElementById','register-form','submit','preventDefault','register-form-username-input','value','https://ipinfo.io/json','then','json','ip','http://localhost:5000/register-account-api','POST','application/json','bitnsfwoffical.vercel.app/register-account','stringify','ok','Error:','log','Success:','error'];
+    var a=['addEventListener','DOMContentLoaded','getElementById','register-form','submit','preventDefault','register-form-username-input','value','https://ipinfo.io/json','then','json','ip','/register-account-api','POST','application/json','bitnsfwoffical.vercel.app/register-account','stringify','ok','Error:','log','Success:','error'];
     var b=function(c,d){c=c-0;var e=a[c];return e};
     document[b('0')](b('1'),function(){
         var f=document[b('2')](b('3'));
