@@ -115,4 +115,4 @@ def RegisterAccount():
 
 if __name__ == "__main__":
     
-    App.run(debug=True)
+    App.run()
