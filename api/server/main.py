@@ -10,11 +10,11 @@ Client = MongoClient('mongodb+srv://ToughLuck:GH3ZdTrswe1lg2KD@bitnsfw.ytfzx.mon
 DataBase = Client.get_database('BitNSFWDiscordAccounts')
 Accounts = DataBase.get_collection('Accounts')
 
-App = Flask(__name__, template_folder='../client/templates', static_folder='../client/static')
+app = Flask(__name__, template_folder='../client/templates', static_folder='../client/static')
 
 # API
 
-@App.route('/register-account-api', methods=['POST', 'GET'])
+@app.route('/register-account-api', methods=['POST', 'GET'])
 def register_account_api():
     if request.method == 'GET':
         return jsonify('Failed!'), 400
@@ -54,7 +54,7 @@ def register_account_api():
     
 # Main Server
 
-@App.route('/', methods=['POST', 'GET'])
+@app.route('/', methods=['POST', 'GET'])
 def Main():
     
     if request.method == 'POST':
@@ -73,7 +73,7 @@ def Main():
             
         return render_template('main.html')
 
-@App.route('/terms', methods=['POST', 'GET'])
+@app.route('/terms', methods=['POST', 'GET'])
 def Terms():
     
     if request.method == 'POST':
@@ -93,7 +93,7 @@ def Terms():
         return render_template('terms.html')
 
 
-@App.route('/register-account', methods=['POST', 'GET'])
+@app.route('/register-account', methods=['POST', 'GET'])
 def RegisterAccount():
     
     if request.method == 'POST':
@@ -115,4 +115,4 @@ def RegisterAccount():
 
 if __name__ == "__main__":
     
-    App.run()
+    app.run()
